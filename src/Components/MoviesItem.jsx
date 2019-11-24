@@ -4,11 +4,12 @@ import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from "reactstrap";
 class MoviesItem extends Component {
     state = {}
   render() {
-      const {movie} = this.props
+      const {movie,selectMovies} = this.props
     return (
       <>
-        <Card className="m-2" inverse>
+        <Card className="m-2" onClick={() => selectMovies(movie)} inverse>
           <CardImg
+            
             width="100%"
             src={movie.Poster}
             alt="Card image cap"
