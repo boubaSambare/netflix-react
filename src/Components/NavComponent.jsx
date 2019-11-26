@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import './navComponent.css'
 import logo from "../logo.png";
+import {Link} from 'react-router-dom'
 
 class NavComponent extends Component {
   render() {
@@ -17,14 +18,13 @@ class NavComponent extends Component {
       <>
         <Navbar className="top-navbar" light expand="md">
           <NavbarBrand href="/">
-            {" "}
             <img src={logo} width="60" height="auto" alt="logo" />
           </NavbarBrand>
           <NavbarToggler />
           <Collapse navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="#" className="text-white">Home</NavLink>
+               <NavLink > <Link to="/" className="text-white">Home</Link></NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="#" className="text-white">Tv Shows</NavLink>
