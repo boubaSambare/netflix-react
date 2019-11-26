@@ -5,9 +5,10 @@ class MoviesItem extends Component {
     state = {}
   render() {
       const {movie,selectMovies} = this.props
+      //console.log(movie.imdbID)
     return (
       <>
-        <Card className="m-2" onClick={() => selectMovies(movie)} inverse>
+        <Card className="m-2" onClick={() => selectMovies(movie.imdbID)} inverse>
           <CardImg
             
             width="100%"

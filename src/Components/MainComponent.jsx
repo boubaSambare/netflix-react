@@ -7,22 +7,23 @@ import MoviePage  from './MoviePage'
 class MainComponent extends Component {
    
     state ={
-        selectedMovie: undefined
+        selectedMovieId: undefined
     }
 
     selectMovie = movie => {
         this.setState({
-          selectedMovie: movie
+          selectedMovieId: movie
         });
       };
     
     render() {
+
         return (
             <>
                <NavComponent></NavComponent>
                <Container>
-                  {this.state.selectedMovie &&  <MoviePage selectMovie={this.state.selectedMovie}></MoviePage>}
-                  {!this.state.selectedMovie &&  <MoviesList selectMovie={this.selectMovie}/>}
+                  {this.state.selectedMovieId !== undefined &&  <MoviePage selectMovie={this.state.selectedMovieId}></MoviePage>}
+                  {!this.state.selectedMovieId &&  <MoviesList selectMovie={this.selectMovie}/>}
                </Container>
             </>
         );
