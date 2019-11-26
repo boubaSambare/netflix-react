@@ -19,7 +19,7 @@ class MoviesList extends Component {
             <Row>
               {item.allMovies.map((element,k) => (
                   <Col className="col-md-3" key={k}>
-                  <MoviesItem movie={element} key={i} selectMovies={this.props.selectMovie}></MoviesItem>
+                  <MoviesItem movie={element} key={i} ></MoviesItem>
                 </Col>
               ))}
             </Row>

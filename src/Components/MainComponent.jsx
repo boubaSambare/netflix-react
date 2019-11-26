@@ -1,35 +1,28 @@
-import React, { Component } from 'react';
-import NavComponent from './NavComponent';
+import React, { Component } from "react";
+import NavComponent from "./NavComponent";
 import { Container, Row, Col } from "reactstrap";
-import MoviesList from './MoviesList';
-import MoviePage  from './MoviePage'
+import MoviePage from "./MoviePage";
+import HomePage from "./HomePage";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 
 class MainComponent extends Component {
-   
-    state ={
-        selectedMovieId: undefined
-    }
+  
 
-    selectMovie = movie => {
-        this.setState({
-          selectedMovieId: movie
-        });
-      };
-    
-    render() {
 
-        return (
-            <>
-               <NavComponent></NavComponent>
-               <Container>
-                  {this.state.selectedMovieId !== undefined &&  <MoviePage selectMovie={this.state.selectedMovieId}></MoviePage>}
-                  {!this.state.selectedMovieId &&  <MoviesList selectMovie={this.selectMovie}/>}
-               </Container>
-            </>
-        );
-    }
-
-    
+  render() {
+    return (
+      <>
+        <Router>
+          <NavComponent></NavComponent>
+          <Container>
+            <Route path="/" exact component={HomePage}/>
+            <Route path="/details/:movieId" component={MoviePage} />
+           
+          </Container>
+        </Router>
+      </>
+    );
+  }
 }
 
 export default MainComponent;
