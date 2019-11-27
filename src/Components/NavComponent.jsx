@@ -24,7 +24,7 @@ class NavComponent extends Component {
           <Collapse navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-               <NavLink > <Link to="/" className="text-white">Home</Link></NavLink>
+                <Link to="/" className="text-white nav-link">Home</Link>
               </NavItem>
               <NavItem>
                 <NavLink href="#" className="text-white">Tv Shows</NavLink>

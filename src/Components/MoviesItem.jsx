@@ -15,14 +15,12 @@ class MoviesItem extends Component {
               width="100%"
               src={movie.Poster}
               alt="Card image cap"
-              style={{ backgroundColor: "transparent" }}
+              style={{ backgroundColor: "transparent"}}
             />
 
             <CardImgOverlay>
-              <CardTitle>{movie.Title}</CardTitle>
-              <CardText></CardText>
               <CardText>
-                <small className="text-muted">{movie.Year}</small>
+              
               </CardText>
             </CardImgOverlay>
           </Card>
