@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col, ListGroup, ListGroupItem } from "reactstrap";
+import ReviewList from './ReviewList'
 
 class MoviePage extends Component {
   state = {
@@ -24,6 +25,7 @@ class MoviePage extends Component {
                 <ListGroupItem>Genre: {movie.Genre}</ListGroupItem>
                 <ListGroupItem>Runtime: {movie.Runtime}</ListGroupItem>
               </ListGroup>
+              <ReviewList id={ this.props.match.params.movieId}/>
             </Col>
           </Row>
         )}
