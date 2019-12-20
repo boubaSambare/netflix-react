@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getComments from '../helper/CommentHelper';
+import {getComments} from '../helper/CommentHelper';
 import Review from './Review';
 
 class ReviewList extends Component {

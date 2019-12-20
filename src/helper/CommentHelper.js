@@ -1,4 +1,4 @@
- const getComments = async (id) => {
+export const getComments = async (id) => {
 
     const autorization = btoa('user12:5s*f!thGyuC8xm&h');
     const getInit = {
@@ -13,5 +13,3 @@
     return await request.json()
 
 }
-
-export default getComments;

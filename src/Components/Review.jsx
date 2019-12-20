@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
-import Rate from "rc-rate";
 
 class Review extends Component {
   render() {
