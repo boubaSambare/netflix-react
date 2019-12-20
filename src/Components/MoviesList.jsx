@@ -48,13 +48,13 @@ class MoviesList extends Component {
     console.log(movies)
     return (
       <div>
-        {movies.map((item,i) => (
-          <div key={i}> 
-            <h1 className="text-white">{item.title}</h1>
+       
+          <div > 
+            <h1 className="text-white">Movies</h1>
             <Row>
             <Col className="col-md-12" >
               <Slider {...settings}>
-                {item.allMovies.map((element,k) => (
+                {movies.map((element,k) => (
                    
                     <MoviesItem movie={element} key={k} ></MoviesItem>
                  
@@ -63,7 +63,6 @@ class MoviesList extends Component {
               </Col>
             </Row>
             </div>
-        ))}
         
       </div>
     );
@@ -79,20 +78,17 @@ class MoviesList extends Component {
       "Alice in Wonderland",
       "Beyond the Sea "
     ];
-    for (let movieName of moviesNames) {
+  
       let response = await fetch(
-        "http://www.omdbapi.com/?apikey=17d07cb2&s=" + movieName
+        "https://bk-netflix.herokuapp.com/media"
       );
       let results = await response.json();
 
       this.setState({
-        movies: [
-          ...this.state.movies,
-          { allMovies: results.Search, title: movieName }
-        ]
+        movies: results
       });
     }
-  };
+  
 }
 
 export default MoviesList;
