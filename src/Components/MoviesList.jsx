@@ -71,14 +71,6 @@ class MoviesList extends Component {
               
 
   componentDidMount = async () => {
-    let moviesNames = [
-      "Harry potter",
-      "Beauty and the Beast",
-      "Star Wars",
-      "Alice in Wonderland",
-      "Beyond the Sea "
-    ];
-  
       let response = await fetch(
         "https://bk-netflix.herokuapp.com/media"
       );

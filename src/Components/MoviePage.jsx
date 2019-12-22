@@ -40,7 +40,7 @@ class MoviePage extends Component {
   getMovieDetail = async () => {
     let movieId = this.props.match.params.movieId;
     let response = await fetch(
-      "http://www.omdbapi.com/?apikey=17d07cb2&i=" + movieId
+      "https://bk-netflix.herokuapp.com/media/" + movieId
     );
     let results = await response.json();
     this.setState({
